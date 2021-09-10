@@ -34,14 +34,14 @@ $(document).ready(function() {
   // let param = searchParams.get('sent')
   let name = $.urlParam('name')
 //   $("#name").text("Vanakkam "+name+"! We are thrilled to invite you to celebrate the union of")
-//   $("#name").text("Hello "+window.location.href.substr(window.location.href.indexOf("?name=")+6));
-// });
-if (window.location.href.indexOf("?name=") > -1) {
-  functionAlert("Hey","");
-//   $("#name).text = "Hello "+window.location.href.substr(window.location.href.indexOf("?name=")+6))
-
   $("#name").text("Hello "+window.location.href.substr(window.location.href.indexOf("?name=")+6));
-}
+});
+// if (window.location.href.indexOf("?name=") > -1) {
+//   //functionAlert("Hey","");
+//   //$("#name).text = "Hello "+window.location.href.substr(window.location.href.indexOf("?name=")+6))
+
+//   $("#name").text("Hello "+window.location.href.substr(window.location.href.indexOf("?name=")+6));
+// }
 
 // Smooth scroll for links with hashes
 $("a.smooth-scroll").click(function(event) {
