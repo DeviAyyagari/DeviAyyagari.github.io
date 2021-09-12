@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'IM FELL Double Pica';
+    src: url('IM_FELL_Double_Pica_Italic.woff2') format('woff2'),
+        url('IM_FELL_Double_Pica_Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
