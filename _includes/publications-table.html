@@ -27,13 +27,23 @@
           </td>
           <td class="pub-entry">
             <div class="pub-title">{{ pub.title }}</div>
+            {% if pub.authors %}
+              {% assign author_text = pub.authors %}
+              {% assign author_text = author_text | replace: "K. D. Ayyagari", "<strong>K. D. Ayyagari</strong>" %}
+              {% assign author_text = author_text | replace: "K D Ayyagari", "<strong>K D Ayyagari</strong>" %}
+              {% assign author_text = author_text | replace: "KD Ayyagari", "<strong>KD Ayyagari</strong>" %}
+              {% assign author_text = author_text | replace: "D. Ayyagari", "<strong>D. Ayyagari</strong>" %}
+              {% assign author_text = author_text | replace: "Devi Ayyagari", "<strong>Devi Ayyagari</strong>" %}
+              {% assign author_text = author_text | replace: "Kameswari Devi Ayyagari", "<strong>Kameswari Devi Ayyagari</strong>" %}
+              {% assign author_text = author_text | replace: "Kameswari D. Ayyagari", "<strong>Kameswari D. Ayyagari</strong>" %}
+            {% endif %}
             <div class="pub-details">
-              {% if pub.authors %}{{ pub.authors }}{% endif %}
+              {% if pub.authors %}{{ author_text | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}{% endif %}
               {% if pub.venue and pub.label == nil %}
                 <span class="pub-venue">, {{ pub.venue }}</span>
               {% endif %}
               {% if pub.link or pub.paperurl %}
-                <a class="pub-link" href="{{ pub.link | default: pub.paperurl }}" target="_blank" rel="noopener">Link</a>
+                [<a class="pub-link" href="{{ pub.link | default: pub.paperurl }}" target="_blank" rel="noopener">Link</a>]
               {% endif %}
             </div>
             {% if pub.notes %}

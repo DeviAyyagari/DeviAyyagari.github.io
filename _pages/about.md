@@ -36,39 +36,43 @@ I believe that building trust in deep learning systems with medical practitioner
 
   .publications-table td {
     border: none;
-    padding: 0;
   }
 
   .pub-label {
     width: 20%;
     color: #7d7d7d;
     font-style: italic;
-    padding-right: 1.5rem;
+    font-size: 0.65rem;
+    text-align: right;
     vertical-align: top;
     letter-spacing: 0.04em;
+    padding-right: 0.5rem;
   }
 
   .pub-entry {
     width: 80%;
     color: #1f1f1f;
     vertical-align: top;
+    padding-left: 0.5rem;
   }
 
   .pub-title {
-    font-size: 1.05rem;
-    font-weight: 600;
+    font-size: 0.95rem;
+    font-weight: 500;
+    vertical-align: top;
     margin-bottom: 0.25rem;
+    color: #7a7a7a;
   }
 
   .pub-details {
-    font-size: 0.98rem;
-    color: #3e3e3e;
+    font-size: 0.7rem;
+    color: #7089a6;
   }
 
   .pub-link {
-    color: #c2651a;
-    font-weight: 600;
-    margin-left: 0.35rem;
+    color: #34507c;
+    font-weight: 500;
+    margin: 0 0.15rem;
   }
 
   .pub-notes {

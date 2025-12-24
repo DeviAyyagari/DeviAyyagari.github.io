@@ -5,7 +5,7 @@ subcollection: patents
 permalink: /publications/patent_critical_component_detection
 date: 2024-02-01
 venue: "United States Patent 11,861,881"
-label: "US Patent 11,861,881 · 2024"
+label: "US Patent 11,861,881 2024"
 authors: "J. Ianni, R. E. Soans, K. D. Ayyagari, S. Kohn"
 inventors: "Julianna Ianni, Russell E. Soans, Kameswari Devi Ayyagari, Saul Kohn"
 number: "US 11,861,881"
