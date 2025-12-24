@@ -1,6 +1,6 @@
 ---
 collection: newsupdates
-date: 2025-06-01
+date: 2025-12-07
 category: "Spotlight Talk"
 institution: "neurIPS 2025"
 link: https://neurips.cc/virtual/2025/loc/san-diego/126912
