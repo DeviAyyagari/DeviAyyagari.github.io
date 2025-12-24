@@ -44,7 +44,7 @@ I believe that building trust in deep learning systems with medical practitioner
     font-style: italic;
     font-size: 0.65rem;
     text-align: right;
-    vertical-align: top;
+    vertical-align: middle;
     letter-spacing: 0.04em;
     padding-right: 0.5rem;
   }
