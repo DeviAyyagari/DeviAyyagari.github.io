@@ -1,0 +1,51 @@
+{% comment %}
+  Renders the News and Updates collection in a two-column layout similar to the publications table.
+{% endcomment %}
+{% if include.list %}
+  {% assign news_source = include.list %}
+{% elsif site.newsupdates %}
+  {% assign news_source = site.newsupdates %}
+{% elsif site.collections.newsupdates %}
+  {% assign news_source = site.collections.newsupdates.docs %}
+{% else %}
+  {% assign news_source = "" %}
+{% endif %}
+{% unless news_source == "" %}
+{% assign sorted_news = news_source | sort: 'date' | reverse %}
+
+<div class="newsupdates-block">
+  <table class="publications-table">
+    <tbody>
+      {% for item in sorted_news %}
+        {% capture label_text %}{{ item.date | date: "%B %Y" }}{% endcapture %}
+        {% assign raw_text = item.content | markdownify | strip_html | strip %}
+        {% capture prefix %}
+          {% if item.category == "Award" %}
+            Award{% if item.institution %} · {{ item.institution }}{% endif %}
+          {% elsif item.category == "Talk" %}
+            Talk{% if item.talk_type %} ({{ item.talk_type }}){% endif %}{% if item.institution %} · {{ item.institution }}{% endif %}
+          {% else %}
+            {{ item.category | default: "Update" }}
+          {% endif %}
+        {% endcapture %}
+      {% capture news_text %}{{ raw_text }}{% endcapture %}
+        <tr>
+          <td class="pub-label">
+            <div class="pub-label-content">
+              {{ label_text | strip }}
+            </div>
+          </td>
+          <td class="pub-entry">
+            <div class="news-text">
+              {{ news_text | strip }}
+              {% if item.link %}
+                [<a class="pub-link" href="{{ item.link }}" target="_blank" rel="noopener">Link</a>]
+              {% endif %}
+            </div>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endunless %}

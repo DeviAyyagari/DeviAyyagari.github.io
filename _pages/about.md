@@ -25,6 +25,10 @@ I believe that building trust in deep learning systems with medical practitioner
 
 {% include publications-table.html %}
 
+## News & Updates
+
+{% include newsupdates-table.html %}
+
 <style>
   .publications-table {
     width: 100%;
@@ -79,6 +83,13 @@ I believe that building trust in deep learning systems with medical practitioner
     font-size: 0.9rem;
     color: #777;
     margin-top: 0.2rem;
+  }
+
+  .news-text {
+    font-size: 0.85rem;
+    color: #4f5a68;
+    line-height: 1.45;
+    font-weight: 400;
   }
 
   @media (max-width: 600px) {
