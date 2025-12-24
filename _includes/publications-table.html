@@ -25,7 +25,13 @@
               Publication
             {% endif %}
           </td>
-          <td class="pub-entry">
+          {% assign pub_url = pub.url | default: pub.permalink | default: pub.link | default: pub.paperurl %}
+          {% if pub_url %}
+            <td class="pub-entry">
+              <a class="pub-entry-link" href="{{ pub_url }}" target="_blank" rel="noopener">
+          {% else %}
+            <td class="pub-entry">
+          {% endif %}
             <div class="pub-title">{{ pub.title }}</div>
             {% if pub.authors %}
               {% assign author_text = pub.authors %}
@@ -42,14 +48,16 @@
               {% if pub.venue and pub.label == nil %}
                 <span class="pub-venue">, {{ pub.venue }}</span>
               {% endif %}
-              {% if pub.link or pub.paperurl %}
-                [<a class="pub-link" href="{{ pub.link | default: pub.paperurl }}" target="_blank" rel="noopener">Link</a>]
-              {% endif %}
             </div>
             {% if pub.notes %}
               <div class="pub-notes">{{ pub.notes }}</div>
             {% endif %}
-          </td>
+          {% if pub_url %}
+              </a>
+            </td>
+          {% else %}
+            </td>
+          {% endif %}
         </tr>
       {% endfor %}
     </tbody>

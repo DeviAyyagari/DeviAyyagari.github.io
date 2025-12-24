@@ -60,6 +60,21 @@ I believe that building trust in deep learning systems with medical practitioner
     padding-left: 0.5rem;
   }
 
+  .pub-entry-link {
+    display: block;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    color: inherit !important;
+  }
+
+  .pub-entry-link:hover,
+  .pub-entry-link:focus,
+  .pub-entry-link:visited {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    color: inherit !important;
+  }
+
   .pub-title {
     font-size: 0.95rem;
     font-weight: 500;
