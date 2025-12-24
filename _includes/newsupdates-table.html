@@ -18,7 +18,9 @@
     <tbody>
       {% for item in sorted_news %}
         {% capture label_text %}{{ item.date | date: "%B %Y" }}{% endcapture %}
-        {% assign raw_text = item.content | markdownify | strip_html | strip %}
+        {% capture rendered_news %}
+          {{ item.content | markdownify | replace: "<p>", "" | replace: "</p>", "" | strip }}
+        {% endcapture %}
         {% capture prefix %}
           {% if item.category == "Award" %}
             Award{% if item.institution %} · {{ item.institution }}{% endif %}
@@ -28,7 +30,7 @@
             {{ item.category | default: "Update" }}
           {% endif %}
         {% endcapture %}
-      {% capture news_text %}{{ raw_text }}{% endcapture %}
+      {% capture news_text %}{{ rendered_news | strip }}{% endcapture %}
         <tr>
           <td class="pub-label">
             <div class="pub-label-content">
