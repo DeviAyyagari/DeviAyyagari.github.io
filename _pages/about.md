@@ -20,3 +20,75 @@ I believe that building trust in deep learning systems with medical practitioner
 - Bioinformatics
 - Explainable AI
 - Algorithmic bias and fairness
+
+## Publications
+
+{% include publications-table.html %}
+
+<style>
+  .publications-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0.85rem;
+    font-family: "Crimson Text", "Georgia", serif;
+    border: none;
+  }
+
+  .publications-table td {
+    border: none;
+    padding: 0;
+  }
+
+  .pub-label {
+    width: 20%;
+    color: #7d7d7d;
+    font-style: italic;
+    padding-right: 1.5rem;
+    vertical-align: top;
+    letter-spacing: 0.04em;
+  }
+
+  .pub-entry {
+    width: 80%;
+    color: #1f1f1f;
+    vertical-align: top;
+  }
+
+  .pub-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .pub-details {
+    font-size: 0.98rem;
+    color: #3e3e3e;
+  }
+
+  .pub-link {
+    color: #c2651a;
+    font-weight: 600;
+    margin-left: 0.35rem;
+  }
+
+  .pub-notes {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 0.2rem;
+  }
+
+  @media (max-width: 600px) {
+    .publications-table,
+    .publications-table tbody,
+    .publications-table tr,
+    .publications-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .pub-label {
+      margin-bottom: 0.15rem;
+      letter-spacing: 0.08em;
+    }
+  }
+</style>

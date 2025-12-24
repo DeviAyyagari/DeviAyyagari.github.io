@@ -1,0 +1,47 @@
+{% comment %}
+  Renders a two-column publication table using the publications collection.
+  Expected front matter per publication:
+    - label (optional): short tag shown in left column. Falls back to venue + year.
+    - authors (optional)
+    - venue (optional)
+    - link / paperurl (optional)
+    - notes (optional): renders as a muted line below details.
+{% endcomment %}
+{% assign pubs_source = include.list | default: site.publications %}
+{% assign sorted_pubs = pubs_source | sort: 'date' | reverse %}
+
+<div class="publications-block">
+  <table class="publications-table">
+    <tbody>
+      {% for pub in sorted_pubs %}
+        <tr>
+          <td class="pub-label">
+            {% if pub.label %}
+              {{ pub.label }}
+            {% elsif pub.venue or pub.date %}
+              {% if pub.venue %}{{ pub.venue }}{% endif %}
+              {% if pub.date %} {{ pub.date | date: "%Y" }}{% endif %}
+            {% else %}
+              Publication
+            {% endif %}
+          </td>
+          <td class="pub-entry">
+            <div class="pub-title">{{ pub.title }}</div>
+            <div class="pub-details">
+              {% if pub.authors %}{{ pub.authors }}{% endif %}
+              {% if pub.venue and pub.label == nil %}
+                <span class="pub-venue">, {{ pub.venue }}</span>
+              {% endif %}
+              {% if pub.link or pub.paperurl %}
+                <a class="pub-link" href="{{ pub.link | default: pub.paperurl }}" target="_blank" rel="noopener">Link</a>
+              {% endif %}
+            </div>
+            {% if pub.notes %}
+              <div class="pub-notes">{{ pub.notes }}</div>
+            {% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
