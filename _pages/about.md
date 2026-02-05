@@ -8,30 +8,25 @@ redirect_from:
   - /about.html
 ---
 
-Welcome! My name is Kameswari Devi Ayyagari. I am interested in studying and leveraging machine learning algorithms to advance biology, medicine and healthcare. The best way to reach me is by email at *akdevi.92 AT gmail*.
+Welcome! My name is Kameswari Devi Ayyagari. I am a PhD candidate at Dalhousie University applying machine learning to ecological monitoring, with a focus on low-light, deep-sea marine survey video. I build scalable, uncertainty-aware computer vision pipelines to improve population detection and counting. The best way to reach me is by email at *akdevi.92 AT gmail*.
 
-I am a PhD candidate at Dalhousie University specializing in the development and application of machine learning methods for ecological and environmental monitoring. My doctoral research focuses on designing scalable, uncertainty-aware computer vision pipelines for analyzing low-light, deep-sea underwater video collected during marine surveys, with the goal of improving how marine populations are detected, counted, and monitored over time.
+My work addresses limited labeled data, class imbalance, domain shift, and unseen species using coarse-to-fine detection, open-set and uncertainty-aware modeling, and foundation models. I also build practical tools for ecologists, including visualization and human-in-the-loop annotation workflows.
 
-My work addresses key challenges inherent to real-world underwater monitoring, including limited labeled data, strong class imbalance, domain and semantic shift across surveys, and the presence of previously unseen species. To tackle these challenges, I develop methods that combine coarse- and fine-grained detection, open-set and uncertainty-aware modeling, and the use of foundation models to improve generalization across deployments, habitats, and years. A central component of my PhD is validating AI-derived population estimates against expert manual counts to ensure methodological advances translate into reliable ecological inference.
+My goal is to bridge modern machine learning with applied ocean science to support more effective, data-driven ecological research and decision-making.
 
-In addition to methodological contributions, I build practical tools and workflows to support domain experts. This includes visualization systems for survey data, human-in-the-loop annotation tools that reduce labeling effort, and end-to-end pipelines that integrate detection, counting, and reporting across multiple surveys. This work involves close collaboration with ecologists and practitioners and extensive experience working with large, heterogeneous datasets.
-
-More broadly, my research is motivated by the need for reliable and scalable monitoring to understand how marine ecosystems are responding to climate change. Effective monitoring is a necessary first step for ecological understanding and data-informed management. My goal is to bridge modern machine learning with applied ocean science to support more effective, data-driven ecological research and decision-making.
-
-Prior to my PhD, I worked on machine learning applications in healthcare, including deep learning methods for whole-slide image classification and image reconstruction.
+Prior to my PhD, I worked on machine learning for healthcare, including whole-slide image classification and image reconstruction.
 
 Currently I am exploring
-- Leveraging foundation models within end-to-end ecological monitoring pipelines
-- Using out-of-distribution detection and self-supervised clustering to reduce annotation burden
-- Building scalable coarse fish detectors trained on large datasets to support fine-grained classification
-- Developing tools intuitive to ecologists to enable them to use trained models and interpret model outputs
+- Foundation models in end-to-end ecological monitoring pipelines
+- Out-of-distribution detection and self-supervised clustering to reduce annotation burden
+- Scalable coarse fish detectors trained on large datasets to support fine-grained classification
 
 
 # Research Interests
-- Machine Learning
-- Computer vision
 - Marine ecosystem and biodiversity monitoring
 - Out-of-distribution and uncertainty-aware modeling
+- Machine Learning
+- Computer vision
 
 ## Publications
 
