@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}  
-  <pre> 4400 The Woods Drive, San Jose, CA-95136| (801) 550 - 3153 | akdevi.92@gmail.com  </pre>
+  <pre> Halifax, Nova Scotia | akdevi.92@gmail.com  </pre>
 
 Education
 ======
